@@ -4,7 +4,7 @@ import TripAdvisorIcon from "../../icons/TripAdvisor.astro";
 import TwitterIcon from "../../icons/Twitter.astro";
 import InstaIcon from "../../icons/Instagram.astro";
 
-import FooterLogo from "../../assets/images/footer-logo.png"
+import FooterLogo from "../../assets/images/icon1.png"
 
 const navigation = [
   { name: "Privacy Policy", href: "https://www.samiad.com/privacy-policy-2/" },
@@ -31,9 +31,9 @@ const social = [
 ];
 ---
 
-<footer class="bg-samiad-dark-brown">
+<footer class="bg-white">
   <div class="mx-auto max-w-7xl overflow-hidden py-12 px-4 sm:px-6 lg:px-8">
-    <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
+   <!-- <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
       {
         navigation.map((item) => (
           <div class="px-5 py-2">
@@ -46,7 +46,7 @@ const social = [
           </div>
         ))
       }
-    </nav>
+    </nav> 
     <div class="mt-8 flex justify-center space-x-6">
       {
         social.map(({ href, name, icon: Icon }) => (
@@ -55,17 +55,17 @@ const social = [
           </a>
         ))
       }
-    </div>
+    </div>--> 
     <div class="my-8">
         <img 
             src={FooterLogo.src}
-            width="150"
+            width="50"
             class="mx-auto"
             alt="Intenational Summer School"
         />
     </div>
-    <p class="mt-8 text-base text-white text-center">
-      &copy; {new Date().getFullYear()} Samiad. All rights reserved.
+    <p class="mt-8 text-base text-gray-800 text-center">
+      &copy; {new Date().getFullYear()} EasyNet Solutions. All rights reserved.
     </p>
    
   </div>
