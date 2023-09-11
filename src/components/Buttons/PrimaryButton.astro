@@ -11,8 +11,7 @@ const { href, marginTop = true, newTab = false } = Astro.props;
   !!href ? (
     <a
       href={href}
-      target={newTab ? "_blank" : "_self"}
-      rel="noopener noreferrer"
+      
       class={`${
         marginTop && "mt-6"
       } block sm:inline-flex items-center text-center uppercase no-underline bg-easynet-orange px-5 py-3 text-sm sm:text-lg tracking-wider font-bold hover:bg-gray-300 shadow-lg text-white rounded-lg`}
