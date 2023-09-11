@@ -1,0 +1,214 @@
+---
+const town = 'TOWN'
+import DefaultContentBlock from "../components/Content/DefaultContentBlock.astro";
+import SubTitle from "../components/Headings/SubTitle.astro";
+import MidTitle from "../components/Headings/MidTitle.astro";
+import TwoColumnContentBlock from "../components/Content/TwoColumnContentBlock.astro";
+import ReversedTwoColumnContentBlock from "../components/Content/ReversedTwoColumnContentBlock.astro";
+import CallToAction from "../components/CallToAction.astro";
+
+import Hero from "../components/Hero/EsHero.astro";
+import ImageLeft from "../components/Content/ImageOnRight.astro";
+
+import Layout from "../layouts/Layout.astro";
+import backgroundImg from "../assets/images/web-bg2.png";
+import webDesign1 from "../assets/images/web-design-img4.png";
+import seo1 from "../assets/images/seo1.png";
+import cta from  "../assets/images/cta-bg.jpg";
+
+
+import placeholder from "../assets/images/600x600.png";
+
+---
+
+<Layout title="Affordable Web Design, SEO and Digital Marketing Services" description="EasyNet Solutions provide affordable web design and digital marketing solutions for your business.">
+  
+  <Hero
+  title="Low Cost Web Design"
+  sub="Create and Grow Your Website from £75"
+  
+  image={backgroundImg.src}
+  >
+  <div slot="heroContent"> 
+    <p class="mt-6 lg:text-lg leading-8">
+      EasyNet Solutions provide affordable, versatile web design and digital marketing solutions for your business.
+      
+    </p>
+    <p class="lg:text-lg leading-8">
+      From feature-rich, fully responsive, high-performance websites to cutting-edge Search Engine Optimisation & digital marketing techniques. We can help your business to achieve the online success it deserves, whatever your size and industry.
+    </p>   
+    
+ 
+  </div>  
+
+  <div slot="card1">
+
+  <div class="text-base leading-7">
+    <h3 class="font-semibold text-easynet-orange">Affordable</h3>
+    <p class="mt-2 text-gray-200">Consectetur vel non. Rerum ut consequatur nobis unde. Enim est quo corrupti consequatur.</p>
+  </div>
+    
+      </div>
+
+<div slot="card2">
+
+  <div class="text-base leading-7">
+    <h3 class="font-semibold text-easynet-orange">Professional</h3>
+    <p class="mt-2 text-gray-300">Consectetur vel non. Rerum ut consequatur nobis unde. Enim est quo corrupti consequatur.</p>
+  </div>
+    
+</div>
+
+<div slot="card3">
+
+  <div class="text-base leading-7">
+    <h3 class="font-semibold text-easynet-orange">Reliable</h3>
+    <p class="mt-2 text-gray-200">Consectetur vel non. Rerum ut consequatur nobis unde. Enim est quo corrupti consequatur.</p>
+  </div>
+    
+
+  
+  
+</div>
+
+  
+
+  </Hero>
+
+  
+<!--
+
+<DefaultContentBlock
+classes="bg-white"
+leadingText="leading text here"
+title="Get started from just £75"
+textAlign="center"
+>
+
+<div slot="content" class="max-w-3xl mx-auto">
+ 
+ <p>Welcome to EasyNet Solutions, your gateway to accessible and cost-effective web solutions that cater to all your digital needs. Our comprehensive services encompass budget-friendly web design, impactful SEO strategies, and results-driven digital marketing campaigns. At EasyNet Solutions, we believe that establishing a strong online presence shouldn't be a luxury reserved for a select few, but a possibility for all. 
+</p>
+
+  <p>With prices starting as low as £75, we proudly present an irresistible offer for a one-page website, making professional web design attainable without breaking the bank. Our team of skilled designers and developers are dedicated to crafting visually appealing, user-friendly, and responsive websites that effectively convey your brand's message. But we don't stop at design alone – our expertise extends to optimizing your online visibility through robust SEO techniques and driving growth via tailored digital marketing strategies. Join us on your journey to online success, where affordability meets excellence, only at EasyNet Solutions.</p>
+</div>
+  
+</DefaultContentBlock>
+
+<TwoColumnContentBlock
+      smallSub="Buy a Holiday Lodge"
+      title="Find your dream holiday home in North Yorkshire."
+      image={tennis}
+      imageAlt="An elderly couple celebrating holiday lodge ownership with a glass of wine"
+      imageHeading="Keld Spring - luxury lodge park in north Yorkshire"
+    >
+      <Fragment slot="content">
+        <p>
+          Whether it's a holiday getaway or permanent residence, Keld Spring
+          offers something unique and special that is sure to fit your needs.
+          With its picturesque views, tranquil atmosphere and convenient
+          location, there's nowhere else quite like Keld Spring!
+        </p>
+        <p>
+          Keld Spring is a collection of 30 luxury holiday homes in North
+          Yorkshire. Each lodge is designed to the highest specification and are
+          available to buy outright or on a 50% shared ownership basis.
+        </p>
+        <p>
+          The lodges are set in a stunning location, with views of the Yorkshire
+          Dales National Park and the North York Moors National Park.
+        </p>
+        <p>
+          This is more than just a holiday park, but a place for all the family,
+          friends and loved ones to relax and create unforgettable memories; to
+          drink, dine, unwind and explore.
+        </p>
+      </Fragment>
+    </TwoColumnContentBlock>  -->
+
+
+    <TwoColumnContentBlock
+    
+    title="Web Design"
+    image={webDesign1}
+    imageAlt="Web Design"
+    titleColor="black"
+    href="/"
+    linkText="Find Out More"
+  >
+    <Fragment slot="content" >
+      <p class="my-4">
+        All of our websites are fully responsive and feature-rich, ideal for a brand new website or update for your current website.
+      </p>
+      <p class="mb-4">
+        Whether it be a basic website to boost your online presence, an eCommerce store to sell your products online, or something bigger, Easynet has the solution for you.
+      </p>
+      <p>
+        With prices starting at just £75 you will be sure to get unbeatable value for money as well as a professional, friendly and helpful service.
+      </p>
+    </Fragment>
+  </TwoColumnContentBlock>
+
+  <ReversedTwoColumnContentBlock
+    
+    title="Search Engine Optimisation"
+    image={seo1}
+    imageAlt="Search Engine Optimisation"
+    href="/"
+    linkText="Find Out More"
+  >
+    <Fragment slot="content" >
+      <p class="my-4">
+        Looking for a digital marketing solution that can take your business to the next level?
+      </p>
+      <p class="mb-4">
+        Reach new heights with our cutting-edge digital marketing solutions. We take a unique approach to Search Engine Optimisation and digital marketing, using groundbreaking techniques to drive traffic, leads and sales.
+      </p>
+      <p>
+        We do the hard work so you can focus on what you do best: running your business.
+      </p>
+    </Fragment>
+  </ReversedTwoColumnContentBlock>
+
+ 
+  <CallToAction
+  background={cta}  
+  title="Can’t get on the first page of Google?"
+  description="If your site isn't working nearly as hard as you are, let us help you get your site found by your customers today."
+  linkText="Start Getting Found"
+/>
+
+
+
+<TwoColumnContentBlock  
+    
+title="Website Content Writing"
+image={webDesign1}
+imageAlt="Website Copywriting"
+titleColor="black"
+href="/"
+linkText="Find Out More"
+>
+<Fragment slot="content" >
+  <p class="my-4">
+    Are you struggling to find the right words to convey your message on your website? Easynet Solutions has you covered with our expert website copywriting services. 
+  </p>
+  <p class="mb-4">
+    Whether you're looking for stand-alone content creation or need it as part of our comprehensive web design and SEO services, we are here to help.
+  </p>
+  <p>
+    Whether you need captivating product descriptions, informative blog posts, or persuasive landing page content, Easynet Solutions is your trusted partner in creating content that not only speaks to your audience but also drives results. Contact us today to discover how our website copywriting services can transform your online presence.
+  </p>
+</Fragment>
+</TwoColumnContentBlock>
+
+<CallToAction
+  background={cta}  
+
+  spanTitle="Grow your business the "
+  titleSpan="Easy " spanTitleNext="Way"
+  description="We understand that having a website built or beginning an online marketing campaign can be both exciting and daunting for you or your business. We take the time to understand your business and what you want from your website or campaign. We will work with you to create a unique solution that perfectly matches your needs and goals. We will do the heavy lifting for you, and will be with you every step of the way."
+  linkText="Get Started Today"
+/>
+
+</Layout>

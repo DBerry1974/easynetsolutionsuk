@@ -1,0 +1,57 @@
+---
+import SubTitle from "../Headings/SubTitle.astro";
+import Container from "../Layout/Container.astro";
+
+interface Props {
+  background?: "white" | "black" | "gray-500";
+  leadingText?: string;
+  title?: string;
+  smallSub?: string;
+  classes?: string;
+  textAlign?: "center" | "left" | "right";
+}
+const {
+  background = "white",
+  classes = "",
+  leadingText,
+  title,
+  smallSub,
+  textAlign,
+} = Astro.props;
+---
+
+<section class={`relative overflow-hidden mb-20 bg-${background} text-${textAlign} ${classes}`}>
+  <Container>
+    <div class="mx-auto max-w-7xl text-lg mt-20">
+      <div>
+        {
+          leadingText && (
+            <span class="block text-base font-semibold text-easynet-orange">
+              {leadingText}
+            </span>
+          )
+        }
+        {
+          smallSub && (
+            <h2 class="text-lg lg:text-xl text-black leading-8 tracking-tight mb-4">
+              {smallSub}
+            </h2>
+          )
+        }
+         {
+          title && (
+            <span class="block text-6xl font-semibold text-black">
+              {title}
+            </span>
+          )
+        }
+        
+      </div>
+    </div>
+    <div class="text-lg text-gray-700 mx-auto mt-6">
+      <slot name="content" />
+    </div>
+    
+    <slot name="body" />
+  </Container>
+</section>

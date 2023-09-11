@@ -1,0 +1,62 @@
+---
+import { Image } from "@astrojs/image/components";
+import Container from "../Layout/Container.astro";
+
+interface Props {
+  title?: string;
+  sub?: string;
+  copy?: string;
+  subCopy?: string;
+  image: string;
+  href?: string;
+  linkText?: string;
+}
+const { title, sub, copy, subCopy, image, href, linkText } = Astro.props;
+---
+
+<div class="bg-keld-green relative min-h-fit sm:min-h-0 overflow-hidden">
+  <div class="absolute inset-0">
+    <Image
+      class="h-full w-full object-cover"
+      src={image}
+      alt="Luxury lodges for sale"
+      width={800}
+      aspectRatio={16 / 9}
+      fit="cover"
+      loading="eager"
+      format="webp"
+    />
+    <div
+      class="absolute inset-0"
+      style="background-image: linear-gradient(90deg, rgba(0,0,0,0.8), rgba(0,0,0,0.2))"
+    >
+    </div>
+  </div>
+  <Container classes="relative">
+    <div class="mx-auto sm:mx-0  text-center sm:text-left">
+      <div class="py-16 lg:py-48">
+        {
+          sub ? (
+            <>
+              <h1 class="mt-4 font-serif font-bold tracking-tight text-white sm:mt-5 text-xl sm:text-2xl xl:text-2xl">
+                {title}
+              </h1>
+              <h2 class="mt-4 font-serif font-bold tracking-tight text-white sm:mt-5 text-4xl sm:text-4xl xl:text-6xl">
+                {sub}
+              </h2>
+            </>
+          ) : (
+            <h1 class="mt-4 font-serif text-center tracking-tight text-white sm:mt-5 text-4xl sm:text-4xl xl:text-6xl">
+              {title}
+            </h1>
+          )
+        }
+
+        {copy && <p class="mt-3 text-xl text-white">{copy}</p>}
+        {subCopy && <p class="mt-3 text-xl text-white">{subCopy}</p>}
+
+     
+      </div>
+    </div>
+  </Container>
+</div>

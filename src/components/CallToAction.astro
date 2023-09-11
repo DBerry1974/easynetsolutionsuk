@@ -1,0 +1,68 @@
+---
+import backgroundImage from "../assets/images/web-bg2.png";
+import { Image } from "@astrojs/image/components";
+import  Button  from "./Buttons/PrimaryButton.astro"
+
+interface Props {
+  background?: string;
+  title?: string;
+  description?: string;
+  linkText?: string;
+  href?: string;
+  Button?: string;
+  spanTitle?: string;
+  titleSpan?: string;
+  spanTitleNext?: string;
+}
+const {
+  background = backgroundImage,
+  title,
+  description = `Start by adding thousands of landing pages to your site and ensure you rank on search engines, fast.`,
+  linkText = "Generate Thousands of Pages Today",
+  href = "/",
+  spanTitle,
+  titleSpan,
+  spanTitleNext
+} = Astro.props;
+---
+
+<section
+  id="get-started-today"
+  class="relative overflow-hidden bg-brand-dark-orange py-32"
+>
+  <Image
+    class="absolute lg:w-screen top-1/2 left-1/2 max-w-none -translate-x-1/2 -translate-y-1/2"
+    src={background}
+    alt={description}
+    width={1920}
+    height={1080}
+    format={"webp"}
+  />
+  <div class="absolute inset-0 bg-black opacity-80"></div>
+  <div class="relative">
+    <div class="mx-auto max-w-6xl text-center">
+      <h2
+        class="font-display font-extrabold text-3xl tracking-tight text-white sm:text-6xl"
+      >
+        {title}
+      </h2>
+      
+      <h2
+        class="font-display inline font-extrabold text-3xl tracking-tight text-white sm:text-6xl"
+      >
+      {spanTitle}</h2>
+      <span class="text-easynet-orange font-display inline font-extrabold text-3xl tracking-tight sm:text-6xl">{titleSpan}</span>
+      <h2
+      class="font-display inline font-extrabold text-3xl tracking-tight text-white sm:text-6xl"
+    >
+    {spanTitleNext}</h2>
+
+      <p class="mt-4 text-xl tracking-tight text-white">
+        {description}
+      </p>
+      <Button client:idle href={href} rel className="mt-10">
+        {linkText}
+      </Button>
+    </div>
+  </div>
+</section>

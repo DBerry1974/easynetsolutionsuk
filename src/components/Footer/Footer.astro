@@ -1,0 +1,72 @@
+---
+import FacebookIcon from "../../icons/Facebook.astro";
+import TripAdvisorIcon from "../../icons/TripAdvisor.astro";
+import TwitterIcon from "../../icons/Twitter.astro";
+import InstaIcon from "../../icons/Instagram.astro";
+
+import FooterLogo from "../../assets/images/footer-logo.png"
+
+const navigation = [
+  { name: "Privacy Policy", href: "https://www.samiad.com/privacy-policy-2/" },
+  { name: "Terms & Conditions", href: "https://www.samiad.com/terms-and-conditions/" },
+  { name: "Contact", href: "https://www.samiad.com/contact-us/" },
+];
+
+const social = [
+  {
+    name: "Facebook",
+    href: "https://www.facebook.com/samiaduk",
+    icon: FacebookIcon,
+  },
+  {
+    name: "Twitter",
+    href: "https://twitter.com/SamiadUKl",
+    icon: TwitterIcon,
+  },
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/samiad_uk/",
+    icon: InstaIcon,
+  },
+];
+---
+
+<footer class="bg-samiad-dark-brown">
+  <div class="mx-auto max-w-7xl overflow-hidden py-12 px-4 sm:px-6 lg:px-8">
+    <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
+      {
+        navigation.map((item) => (
+          <div class="px-5 py-2">
+            <a
+              href={item.href}
+              class="text-base text-white hover:text-samiad-gold"
+            >
+              {item.name}
+            </a>
+          </div>
+        ))
+      }
+    </nav>
+    <div class="mt-8 flex justify-center space-x-6">
+      {
+        social.map(({ href, name, icon: Icon }) => (
+          <a href={href} class="text-samiad-gold hover:text-white">
+            <Icon classes="h-6 w-6" aria-hidden="true" />
+          </a>
+        ))
+      }
+    </div>
+    <div class="my-8">
+        <img 
+            src={FooterLogo.src}
+            width="150"
+            class="mx-auto"
+            alt="Intenational Summer School"
+        />
+    </div>
+    <p class="mt-8 text-base text-white text-center">
+      &copy; {new Date().getFullYear()} Samiad. All rights reserved.
+    </p>
+   
+  </div>
+</footer>

@@ -1,0 +1,69 @@
+---
+import { Image } from "@astrojs/image/components";
+import keld from "../assets/images/use-cases/keld/keld-banner.jpeg";
+import Container from "../components/Container.astro";
+
+interface Props {
+    image?: string;
+    width?: string;
+    height?: string;
+    imageAlt?: string;
+}
+
+const { image, width, height, imageAlt } = Astro.props;
+
+// I decided to break this out into, what I'm calling, "content-blocks" — these will be
+// pieces of content that don't quite fit the criteria of a reusable component, but can
+// be used elsewhere, if needed.
+---
+
+<div class="bg-white py-24 sm:py-32">
+ <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div
+      class="mx-auto grid max-w-2xl grid-cols-1 items-start gap-y-16 gap-x-8 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2"
+    >
+      <div class="lg:pr-4">
+        <div
+          class="relative overflow-hidden rounded-3xl bg-gray-900 px-6  pt-64 pb-64 shadow-2xl sm:px-12 lg:max-w-lg  lg:px-8 lg:pb-64 xl:px-10 xl:pb-10"
+        >
+          <Image
+            class="absolute inset-0 h-full w-full object-cover brightness-125"
+            src={image}
+            width={width}
+            height={height}
+            alt={imageAlt}
+          />
+        
+          
+        </div>
+      </div>
+      <div>
+        <div class="text-base leading-7 text-gray-700 lg:max-w-lg">
+          <p class="text-base font-semibold leading-7 text-brand-dark-orange">
+            Keld Spring
+          </p>
+          <h1
+            class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+          >
+            Outshining the Competition, Beyond Comparison
+          </h1>
+          <div class="max-w-xl">
+            <p class="mt-6">
+                We meticulously crafted landing pages that presented a comprehensive and compelling comparison between Keld Spring's lodges and various alternatives, such as caravans and holiday rentals. <br />These competitor comparison landing pages served as a powerful tool to highlight the exclusive features, amenities, and experiences offered by Keld Spring's lodges. We showcased the superior quality, privacy, and customization options available to guests, emphasizing the unparalleled luxury and comfort provided by their accommodations.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-10 flex">
+          <a
+            href="https://keldspring.co.uk"
+            rel="noopener noreferrer"
+            target="_blank"
+            class="text-base font-semibold leading-7 text-brand-dark-orange"
+            >Visit Keld Spring <span aria-hidden="true">&rarr;</span></a
+          >
+        </div>
+      </div>
+    </div>
+</div>
+</div>

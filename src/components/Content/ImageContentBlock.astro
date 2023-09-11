@@ -1,0 +1,68 @@
+---
+import { Image } from "@astrojs/image/components";
+import PrimaryButton from "../Buttons/PrimaryButton.astro";
+import SubTitle from "../Headings/SubTitle.astro";
+import Container from "../Layout/Container.astro";
+
+interface Props {
+  title: string;
+  copy?: string;
+  subCopy?: string;
+  image: string;
+  href?: string;
+  linkText?: string;
+}
+const { title, copy, subCopy, image, href, linkText } = Astro.props;
+---
+
+<section class="bg-gray-900 relative overflow-hidden py-24">
+  <div class="absolute inset-0">
+    <Image
+      class="h-full w-full object-cover"
+      src={image}
+      alt="People celebrating how ownership"
+      width={800}
+      aspectRatio={16 / 9}
+      fit="cover"
+      loading="eager"
+      format="webp"
+    />
+
+    <div class="absolute inset-0 bg-black opacity-60"></div>
+  </div>
+  <Container classes="relative">
+    <div class="mx-auto max-w-prose text-lg">
+      <div>
+        <SubTitle color="white" textAlign="center">
+          {title}
+        </SubTitle>
+      </div>
+    </div>
+
+    <div class="prose prose-lg prose-keld-yellow mx-auto mt-6 text-white">
+      {
+        copy && (
+          <div class="prose prose-lg prose-keld-yellow mx-auto mt-6 text-white">
+            <p>{copy}</p>
+          </div>
+        )
+      }
+      {
+        subCopy && (
+          <div class="prose prose-lg prose-keld-yellow mx-auto mt-2 text-white">
+            <p>{subCopy}</p>
+          </div>
+        )
+      }
+      {
+        href && (
+          <div class="block sm:flex justify-center">
+            <PrimaryButton marginTop href={href}>
+              {linkText}
+            </PrimaryButton>
+          </div>
+        )
+      }
+    </div>
+  </Container>
+</section>

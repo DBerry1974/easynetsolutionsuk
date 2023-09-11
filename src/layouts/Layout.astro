@@ -1,0 +1,39 @@
+---
+import Header from "../components/Header/Header.astro";
+import Footer from "../components/Footer/Footer.astro";
+import '@fontsource-variable/playfair-display';
+import '@fontsource/poppins';
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,  
+  description,
+} = Astro.props;
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+   
+    <meta name="theme-color" content="#ffffff" />
+    <meta property="og:type" content="Samiad International Summer School" />
+    <meta property="og:url" content="https://www.samiad.com/" />
+    <meta property="og:description" content="Samiad International Summer School. International summer school programmes for juniors and teenagers to experience unforgettable English language programmes.">
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body   class="text-gray-800">
+    <Header />
+    
+    <slot />
+   
+  </body>
+</html>

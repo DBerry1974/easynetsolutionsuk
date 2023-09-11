@@ -1,0 +1,12 @@
+---
+interface Props {
+  color?: "white" | "keld-slate" | "keld-yellow";
+}
+const { color = "white" } = Astro.props;
+---
+
+<h3
+  class={`font-sans font-bold tracking-tight text-${color} text-3xl md:text-4xl`}
+>
+  <slot />
+</h3>

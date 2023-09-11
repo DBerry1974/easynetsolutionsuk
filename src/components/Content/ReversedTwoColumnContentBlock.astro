@@ -1,0 +1,103 @@
+---
+import { Image } from "@astrojs/image/components";
+import SubTitle from "../Headings/SubTitle.astro";
+import Container from "../Layout/Container.astro";
+import PrimaryButton from "../Buttons/PrimaryButton.astro";
+
+interface Props {
+  image: string;
+  imageAlt: string;
+  title: string;
+  titleColor?: "black" | "white" | "easynet-orange";
+  smallSub?: string;
+  leadText?: string;
+  imageHeading?: string;
+  imgAlign?: "center" | "top";
+  href?: string;
+  linkText?: string;
+  width: string;
+  height: string;
+}
+const {
+  image,
+  imageAlt,
+  imageHeading,
+  title,
+  smallSub,
+  leadText,
+  href,
+  linkText,
+  imgAlign = "center",
+  titleColor = "black",
+  width,
+  height,
+} = Astro.props;
+---
+
+<section class="overflow-hidden bg-white">
+  <Container classes="relative py-16">
+    <div class="lg:grid lg:grid-cols-2 lg:gap-8 lg:-ml-20 overflow-hidden">
+      <div
+        class={`relative lg:col-start-1 lg:row-start-1 lg:flex  ${
+          imgAlign === "top" ? "" : "lg:items-center"
+        }`}
+      >
+        <div class="relative mx-auto text-lg lg:max-w-none">
+          <figure>
+            <div class="aspect-w-12 aspect-h-7 lg:aspect-none rounded-3xl overflow-hidden">
+              <Image
+                class="object-cover object-center shadow-lg"
+                src={image}
+                alt={imageAlt}
+                width={width}
+                height={height}
+              />
+            </div>
+            {
+              imageHeading && (
+                <figcaption class="mt-3 flex text-sm text-gray-500">
+                  <h3>{imageHeading}</h3>
+                </figcaption>
+              )
+            }
+          </figure>
+          <slot name="below-image" />
+        </div>
+      </div>
+      <div class="mt-8 lg:mt-0">
+        <slot name="before-content" />
+        <div class="mx-auto max-w-prose lg:max-w-none text-lg">
+          <div>
+            {
+              leadText && (
+                <span class="block text-lg text-keld-slate">{leadText}</span>
+              )
+            }
+
+            {
+              smallSub && (
+                <h2 class="text-lg lg:text-xl text-keld-slate leading-8 tracking-tight mb-4">
+                  {smallSub}
+                </h2>
+              )
+            }
+
+            <SubTitle color={titleColor} textAlign="left">{title}</SubTitle>
+          </div>
+        </div>
+        <div
+          class="leading-8 lg:text-lg mx-auto mt-5 text-gray-700 lg:col-start-1 lg:row-start-1 lg:max-w-none"
+        >
+          <slot name="content" />
+          {
+           href && (
+            <PrimaryButton newTab href={href}>
+                {linkText}
+             </PrimaryButton>
+           )
+          }
+        </div>
+      </div>
+    </div>
+  </Container>
+</section>

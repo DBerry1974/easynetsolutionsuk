@@ -1,0 +1,50 @@
+---
+import SubTitle from "../Headings/SubTitle.astro";
+import Container from "../Layout/Container.astro";
+
+interface Props {
+  background?: "white" | "keld-yellow" | "stone-100";
+  leadingText?: string;
+  title?: string;
+  smallSub?: string;
+  classes?: string;
+}
+const {
+  background = "white",
+  classes = "",
+  leadingText,
+  title,
+  smallSub,
+} = Astro.props;
+---
+
+<section class={`relative overflow-hidden py-16 bg-${background} ${classes}`}>
+  <Container>
+    <div class="mx-auto max-w-4xl text-lg">
+      <div>
+        {
+          leadingText && (
+            <span class="block text-center text-sm font-semibold text-keld-slate tracking-widest uppercase">
+              {leadingText}
+            </span>
+          )
+        }
+        {
+          smallSub && (
+            <h2 class="text-lg lg:text-xl text-keld-slate leading-8 tracking-tight mb-4 text-center">
+              {smallSub}
+            </h2>
+          )
+        }
+        <SubTitle>
+          {title}
+        </SubTitle>
+      </div>
+    </div>
+    <div class="max-w-4xl text-lg prose-keld-yellow mx-auto mt-6 text-keld-slate">
+      <slot name="content" />
+    </div>
+    
+    <slot name="body" />
+  </Container>
+</section>

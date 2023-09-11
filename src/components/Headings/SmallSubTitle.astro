@@ -1,0 +1,14 @@
+---
+interface Props {
+  color?: "keld-slate" | "white" | "keld-yellow";
+  textAlign?: "center" | "left" | "right";
+  fontWeight?: "normal" | "bold";
+}
+const { color = "keld-slate", textAlign = "center", fontWeight="normal" } = Astro.props;
+---
+
+<h3
+  class={`block text-${textAlign} text-xl font-${fontWeight} leading-8 tracking-tight text-${color}`}
+>
+  <slot />
+</h3>

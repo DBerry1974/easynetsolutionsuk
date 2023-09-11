@@ -1,0 +1,13 @@
+---
+interface Props {
+  color?: "gray-200" | "white" | "black";
+  textAlign?: "center" | "left" | "right";
+}
+const { color = "black", textAlign = "center" } = Astro.props;
+---
+
+<h2
+  class={`block text-${textAlign} font-bold text-3xl font-sans leading-8 tracking-tight text-${color} sm:text-6xl`}
+>
+  <slot />
+</h2>
