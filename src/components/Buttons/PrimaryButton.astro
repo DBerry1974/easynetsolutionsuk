@@ -4,7 +4,7 @@ interface Props {
   marginTop?: boolean;
   newTab?: boolean;
 }
-const { href, onClick, marginTop = true, newTab = false } = Astro.props;
+const { href, marginTop = true, newTab = false } = Astro.props;
 ---
 
 {
@@ -21,7 +21,7 @@ const { href, onClick, marginTop = true, newTab = false } = Astro.props;
     </a>
   ) : (
     <button
-      onclick={onClick}
+      
       class={`${
         marginTop && "mt-6"
       }  block sm:inline-flex items-center uppercase bg-keld-yellow px-4 sm:px-7 py-4 text-sm sm:text-lg tracking-wider font-bold text-keld-slate shadow-sm hover:bg-yellow-700 hover:text-keld-slate focus:outline-none focus:ring-2 focus:ring-keld-yellow focus:ring-offset-2`}
