@@ -1,0 +1,326 @@
+---
+const town = 'TOWN'
+import DefaultContentBlock from "../components/Content/DefaultContentBlock.astro";
+import SubTitle from "../components/Headings/SubTitle.astro";
+import MidTitle from "../components/Headings/MidTitle.astro";
+import TwoColumnContentBlock from "../components/Content/TwoColumnContentBlock.astro";
+import ReversedTwoColumnContentBlock from "../components/Content/ReversedTwoColumnContentBlock.astro";
+import CallToAction from "../components/CallToAction.astro";
+
+import Hero from "../components/Hero/EsHero.astro";
+import ImageLeft from "../components/Content/ImageOnRight.astro";
+
+import Layout from "../layouts/Layout.astro";
+import backgroundImg from "../assets/images/web-bg2.png";
+import webDesign1 from "../assets/images/web-design-img4.png";
+import seo1 from "../assets/images/seo1.png";
+import cta from  "../assets/images/cta-bg.jpg";
+import copy from  "../assets/images/copy1.jpg";
+import growth from  "../assets/images/growth1.jpg";
+import placeholder from "../assets/images/600x600.png";
+
+---
+
+<Layout title="Affordable Web Design, SEO and Digital Marketing Services" description="EasyNet Solutions provide affordable web design and digital marketing solutions for your business.">
+  
+  <Hero
+  title="Low Cost Web Design"
+  sub="Affordable Web Design from £75"
+  
+  image={backgroundImg.src}
+  >
+  <div slot="heroContent"> 
+    <p class="mt-6 lg:text-lg leading-8">
+        Fully responsive and feature-rich websites - ideal for your first website or as an update for your current website.
+
+        
+      
+    </p>
+    <p class="lg:text-lg leading-8">
+        Whether you need a simple website to boost your online presence, an eCommerce store to sell your products on the web, an online booking system, or something else, we will work with you to find the perfect solution.
+    </p>   
+    
+ 
+  </div>  
+
+  <div slot="card1">
+
+  <div class="text-base leading-7">
+    <h3 class="font-semibold text-3xl text-white">Bespoke website packages
+        tailored to your needs</h3>
+    
+  </div>
+    
+      </div>
+
+<div slot="card2">
+
+  <div class="text-base leading-7">
+    <h3 class="font-semibold text-3xl text-white">Prices start from as low as £75</h3>
+  </div>
+    
+</div>
+
+<div slot="card3">
+    
+  <div class="text-base leading-7">
+ 
+      
+
+      
+    <h3 class="font-semibold text-3xl text-white">Fully Responsive Designs to work on any device</h3>
+  </div>
+    
+  
+  
+  
+</div>
+
+  
+
+  </Hero>
+
+  
+<!--
+
+<DefaultContentBlock
+classes="bg-white"
+leadingText="leading text here"
+title="Get started from just £75"
+textAlign="center"
+>
+
+<div slot="content" class="max-w-3xl mx-auto">
+ 
+ <p>Welcome to EasyNet Solutions, your gateway to accessible and cost-effective web solutions that cater to all your digital needs. Our comprehensive services encompass budget-friendly web design, impactful SEO strategies, and results-driven digital marketing campaigns. At EasyNet Solutions, we believe that establishing a strong online presence shouldn't be a luxury reserved for a select few, but a possibility for all. 
+</p>
+
+  <p>With prices starting as low as £75, we proudly present an irresistible offer for a one-page website, making professional web design attainable without breaking the bank. Our team of skilled designers and developers are dedicated to crafting visually appealing, user-friendly, and responsive websites that effectively convey your brand's message. But we don't stop at design alone – our expertise extends to optimizing your online visibility through robust SEO techniques and driving growth via tailored digital marketing strategies. Join us on your journey to online success, where affordability meets excellence, only at EasyNet Solutions.</p>
+</div>
+  
+</DefaultContentBlock> -->
+
+
+
+
+    <TwoColumnContentBlock
+    
+    title="Web Design"
+    image={webDesign1}
+    imageAlt="Web Design"
+    titleColor="black"
+    href="/"
+    linkText="Find Out More"
+  >
+    <Fragment slot="content" >
+      <p class="my-4">
+        At EasyNet Solutions, we're all about making your online journey smooth and enjoyable.<br />Our websites are designed to be user-friendly and loaded with impressive features. Whether you're venturing into the online world for the first time or giving your current site a makeover, we've got the perfect solution for you.
+      </p>
+      <p class="mb-4">
+        Whether you need a straightforward website to boost your online presence, an eye-catching eCommerce store to showcase and sell your products, a hassle-free online booking system, or something entirely unique, count on us to be your trusted partner every step of the way.
+
+    </p>
+      <p>
+        With prices starting at just £75 you will be sure to get unbeatable value for money as well as a professional, friendly and helpful service.
+      </p>
+    </Fragment>
+  </TwoColumnContentBlock>
+
+
+
+  <div class="bg-gray-900 py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:text-center">
+        <h2 class="text-base lg:text-xl font-semibold leading-7 text-easynet-orange">Website Features
+        </h2>
+        <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-6xl">Everything you need to make your website work for you</p>
+        <p class="mt-6 text-lg leading-8 text-gray-300">Our website packages come packed with a whole range of features. Here are just a few of them.<br /> If there is something else that you require, please let us know!
+        </p>
+      </div>
+      <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+        <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+          
+            <div class="flex flex-col">
+            <dt class="flex items-center gap-x-3 text-2xl leading-7 text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ff9a02" class="w-16 h-16">
+                    <path fill-rule="evenodd" d="M8.161 2.58a1.875 1.875 0 011.678 0l4.993 2.498c.106.052.23.052.336 0l3.869-1.935A1.875 1.875 0 0121.75 4.82v12.485c0 .71-.401 1.36-1.037 1.677l-4.875 2.437a1.875 1.875 0 01-1.676 0l-4.994-2.497a.375.375 0 00-.336 0l-3.868 1.935A1.875 1.875 0 012.25 19.18V6.695c0-.71.401-1.36 1.036-1.677l4.875-2.437zM9 6a.75.75 0 01.75.75V15a.75.75 0 01-1.5 0V6.75A.75.75 0 019 6zm6.75 3a.75.75 0 00-1.5 0v8.25a.75.75 0 001.5 0V9z" clip-rule="evenodd" />
+                  </svg>
+                  
+                  
+                  
+                  
+             <span class="font-bold">Google Maps</span>
+            </dt>
+            <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
+              <p class="flex-auto">Let your customers find you with ease by including a Google map on your website.</p>
+              
+            </dd>
+          </div>
+          
+
+          <div class="flex flex-col">
+            <dt class="flex items-center gap-x-3 text-2xl leading-7 text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ff9a02" class="w-16 h-16">
+                    <path fill-rule="evenodd" d="M1.5 6a2.25 2.25 0 012.25-2.25h16.5A2.25 2.25 0 0122.5 6v12a2.25 2.25 0 01-2.25 2.25H3.75A2.25 2.25 0 011.5 18V6zM3 16.06V18c0 .414.336.75.75.75h16.5A.75.75 0 0021 18v-1.94l-2.69-2.689a1.5 1.5 0 00-2.12 0l-.88.879.97.97a.75.75 0 11-1.06 1.06l-5.16-5.159a1.5 1.5 0 00-2.12 0L3 16.061zm10.125-7.81a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0z" clip-rule="evenodd" />
+                  </svg>
+                  
+                  
+                  
+             <span class="font-bold">Image Gallery</span>
+            </dt>
+            <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
+              <p class="flex-auto">Enhance your website and your online presence with an image gallery - show your customers who you are & what you do.</p>
+             
+            </dd>
+          </div>
+          
+
+          <div class="flex flex-col">
+            <dt class="flex items-center gap-x-3 text-2xl leading-7 text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ff9a02" class="w-16 h-16">
+                    <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm14.024-.983a1.125 1.125 0 010 1.966l-5.603 3.113A1.125 1.125 0 019 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113z" clip-rule="evenodd" />
+                  </svg>
+                  
+                  
+                  
+                  
+             <span class="font-bold">Video</span>
+            </dt>
+            <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
+              <p class="flex-auto">Add videos to your website to grab your audience's attention, making your content more engaging and memorable.</p>
+             
+            </dd>
+          </div>
+          
+
+          <div class="flex flex-col">
+            <dt class="flex items-center gap-x-3 text-2xl leading-7 text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ff9a02" class="w-16 h-16">
+                    <path d="M6.25 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM3.25 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM19.75 7.5a.75.75 0 00-1.5 0v2.25H16a.75.75 0 000 1.5h2.25v2.25a.75.75 0 001.5 0v-2.25H22a.75.75 0 000-1.5h-2.25V7.5z" />
+                  </svg>
+                  
+                  
+                  
+                  
+             <span class="font-bold">Social Media Integration</span>
+            </dt>
+            <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
+              <p class="flex-auto">Link your website to your Social Media accounts including Facebook, Instagram, Twitter, Tripadvisor and more.</p>
+              
+            </dd>
+          </div>
+          
+
+          <div class="flex flex-col">
+            <dt class="flex items-center gap-x-3 text-2xl leading-7 text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ff9a02" class="w-16 h-16">
+                    <path fill-rule="evenodd" d="M4.125 3C3.089 3 2.25 3.84 2.25 4.875V18a3 3 0 003 3h15a3 3 0 01-3-3V4.875C17.25 3.839 16.41 3 15.375 3H4.125zM12 9.75a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5H12zm-.75-2.25a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5H12a.75.75 0 01-.75-.75zM6 12.75a.75.75 0 000 1.5h7.5a.75.75 0 000-1.5H6zm-.75 3.75a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5H6a.75.75 0 01-.75-.75zM6 6.75a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h3a.75.75 0 00.75-.75v-3A.75.75 0 009 6.75H6z" clip-rule="evenodd" />
+                    <path d="M18.75 6.75h1.875c.621 0 1.125.504 1.125 1.125V18a1.5 1.5 0 01-3 0V6.75z" />
+                  </svg>
+                  
+                  
+                  
+                  
+             <span class="font-bold">Newsletter Signup
+            </span>
+            </dt>
+            <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
+              <p class="flex-auto">Allow signups direct from your site, connect directly with your audience, keeping them informed and engaged with your updates and offerings.</p>
+             
+            </dd>
+          </div>
+          
+
+          <div class="flex flex-col">
+            <dt class="flex items-center gap-x-3 text-2xl leading-7 text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ff9a02" class="w-16 h-16">
+                    <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 01.67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 11-.671-1.34l.041-.022zM12 9a.75.75 0 100-1.5.75.75 0 000 1.5z" clip-rule="evenodd" />
+                  </svg>
+                  
+                  
+                  
+                  
+                  
+             <span class="font-bold">FAQ Section</span>
+            </dt>
+            <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
+              <p class="flex-auto">Incorporating an FAQ section on your website answers common questions, providing valuable information, enhancing user experience and helping them find what they need quickly and easily.</p>
+              
+            </dd>
+          </div>
+          
+        </dl>
+      </div>
+    </div>
+  </div>
+
+
+  
+
+  <ReversedTwoColumnContentBlock
+    
+    title="Search Engine Optimisation"
+    image={seo1}
+    imageAlt="Search Engine Optimisation"
+    href="/"
+    linkText="Find Out More"
+  >
+    <Fragment slot="content" >
+      <p class="my-4">
+        Looking for a digital marketing solution that can take your business to the next level?
+      </p>
+      <p class="mb-4">
+        Reach new heights with our cutting-edge digital marketing solutions. We take a unique approach to Search Engine Optimisation and digital marketing, using groundbreaking techniques - including super-optimized to drive traffic, leads and sales.
+      </p>
+      <p>
+        We do the hard work so you can focus on what you do best: running your business.
+      </p>
+    </Fragment>
+  </ReversedTwoColumnContentBlock>
+
+ 
+  <CallToAction
+  background={cta}  
+  title="Can’t get on the first page of Google?"
+  description="If your site isn't working nearly as hard as you are, let us help you get your site found by your customers today."
+  linkText="Get Your Website Found"
+/>
+
+
+
+<TwoColumnContentBlock  
+    
+title="Website Content Writing"
+image={copy}
+imageAlt="Website Copywriting"
+titleColor="black"
+href="/"
+linkText="Find Out More"
+>
+<Fragment slot="content" >
+  <p class="my-4">
+    Are you struggling to find the right words to convey your message on your website? Easynet Solutions has you covered with our expert website copywriting services. 
+  </p>
+  <p class="mb-4">
+    Whether you're looking for stand-alone content creation or need it as part of our comprehensive web design and SEO services, we are here to help.
+  </p>
+  <p>
+    Whether you need captivating product descriptions, informative blog posts, or persuasive landing page content, Easynet Solutions is your trusted partner in creating content that not only speaks to your audience but also drives results. Contact us today to discover how our website copywriting services can transform your online presence.
+  </p>
+</Fragment>
+</TwoColumnContentBlock>
+
+<CallToAction
+  background={growth}  
+
+  spanTitle="Grow your business the "
+  titleSpan="Easy " spanTitleNext="Way"
+  description="We understand that having a website built or beginning an online marketing campaign can be both exciting and daunting for you or your business. We take the time to understand your business and what you want from your website or campaign. We will work with you to create a unique solution that perfectly matches your needs and goals. We will do the heavy lifting for you, and will be with you every step of the way."
+  linkText="Get Started Today"
+/>
+
+
+  
+
+</Layout>
+

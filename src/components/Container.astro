@@ -1,0 +1,11 @@
+---
+import clsx from "clsx";
+interface Props {
+  classes?: string;
+}
+const { classes, props } = Astro.props;
+---
+
+<div class={clsx("mx-auto max-w-7xl px-4 sm:px-6 lg:px-8", classes)}>
+  <slot />
+</div>
