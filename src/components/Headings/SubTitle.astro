@@ -3,11 +3,11 @@ interface Props {
   color?: "gray-200" | "white" | "black";
   textAlign?: "center" | "left" | "right";
 }
-const { color = "black", textAlign = "center" } = Astro.props;
+const { color = "black", textAlign = "center", } = Astro.props;
 ---
 
 <h2
-  class={`block text-${textAlign} font-bold text-3xl font-sans leading-8 tracking-tight text-${color} sm:text-6xl`}
+  class={`block text-${textAlign} font-extrabold text-3xl font-sans tracking-tight text-${color} leading-8 sm:text-4xl`}
 >
   <slot />
 </h2>

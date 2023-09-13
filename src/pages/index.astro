@@ -7,7 +7,7 @@ import TwoColumnContentBlock from "../components/Content/TwoColumnContentBlock.a
 import ReversedTwoColumnContentBlock from "../components/Content/ReversedTwoColumnContentBlock.astro";
 import CallToAction from "../components/CallToAction.astro";
 
-import Hero from "../components/Hero/EsHero.astro";
+import Hero from "../components/Hero/HeroNoCards.astro";
 import ImageLeft from "../components/Content/ImageOnRight.astro";
 
 import Layout from "../layouts/Layout.astro";
@@ -30,17 +30,17 @@ import placeholder from "../assets/images/600x600.png";
   image={backgroundImg.src}
   >
   <div slot="heroContent"> 
-    <p class="mt-6 lg:text-lg leading-8">
+    <p class="my-6 lg:text-lg leading-8">
       EasyNet Solutions provide affordable, versatile web design and digital marketing solutions for your business.
       
     </p>
-    <p class="lg:text-lg leading-8">
-      From feature-rich, fully responsive, high-performance websites to cutting-edge Search Engine Optimisation & digital marketing techniques. We can help your business to achieve the online success it deserves, whatever your size and industry.
+    <p class="lg:text-lg leading-8 mb-6">
+      From lightning-fast, feature-rich, fully responsive, high-performance websites to cutting-edge Search Engine Optimisation & digital marketing techniques. We can help your business to achieve the online success it deserves, whatever your size and industry.
     </p>   
     
- 
+    <p class="font-bold">We use cutting-edge techniques to ensure that your website out-performs your competitors, giving you the best chance possible to stay ahead of the rest. </p>
   </div>  
-
+<!-- 
   <div slot="card1">
 
   <div class="text-base leading-7">
@@ -70,7 +70,7 @@ import placeholder from "../assets/images/600x600.png";
 
   
   
-</div>
+</div>-->
 
   
 
@@ -139,10 +139,13 @@ textAlign="center"
   >
     <Fragment slot="content" >
       <p class="my-4">
-        All of our websites are fully responsive and feature-rich, ideal for a brand new website or update for your current website.
+        All of our websites are fully responsive, feature-rich and lightning-fast ideal for a brand new website or update for your current website.
       </p>
       <p class="mb-4">
         Whether it be a basic website to boost your online presence, an eCommerce store to sell your products online, or something bigger, Easynet has the solution for you.
+      </p>
+      <p class="mb-4">
+        With our cutting-edge technology, your website will be sure to give you the edge over your competitors.
       </p>
       <p>
         With prices starting at just £75 you will be sure to get unbeatable value for money as well as a professional, friendly and helpful service.
@@ -165,7 +168,10 @@ textAlign="center"
         Looking for a digital marketing solution that can take your business to the next level?
       </p>
       <p class="mb-4">
-        Reach new heights with our cutting-edge digital marketing solutions. We take a unique approach to Search Engine Optimisation and digital marketing, using groundbreaking techniques - including super-optimized to drive traffic, leads and sales.
+        Reach new heights with our cutting-edge digital marketing solutions. We take a unique approach to Search Engine Optimisation and digital marketing, using groundbreaking techniques to drive traffic, leads and sales.
+      </p>
+      <p class="mb-4">
+        We will produce a range of lightning-fast, highly-optimized landing pages to boost your online presence and give you the edge over the competition.
       </p>
       <p>
         We do the hard work so you can focus on what you do best: running your business.
@@ -198,6 +204,9 @@ linkText="Find Out More"
   </p>
   <p class="mb-4">
     Whether you're looking for stand-alone content creation or need it as part of our comprehensive web design and SEO services, we are here to help.
+  </p>
+  <p class="mb-4">
+    With EasyNet, you get more than just words... we provide highly optimized content that is aimed at outperforming your direct competition on Google.
   </p>
   <p>
     Whether you need captivating product descriptions, informative blog posts, or persuasive landing page content, Easynet Solutions is your trusted partner in creating content that not only speaks to your audience but also drives results. Contact us today to discover how our website copywriting services can transform your online presence.
