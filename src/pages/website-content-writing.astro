@@ -1,0 +1,232 @@
+---
+const town = 'TOWN'
+import DefaultContentBlock from "../components/Content/DefaultContentBlock.astro";
+import SubTitle from "../components/Headings/SubTitle.astro";
+import MidTitle from "../components/Headings/MidTitle.astro";
+import TwoColumnContentBlock from "../components/Content/TwoColumnContentBlock.astro";
+import ReversedTwoColumnContentBlock from "../components/Content/ReversedTwoColumnContentBlock.astro";
+import CallToAction from "../components/CallToAction.astro";
+
+import Hero from "../components/Hero/HeroNoCards.astro";
+import ImageLeft from "../components/Content/ImageOnRight.astro";
+
+import Layout from "../layouts/Layout.astro";
+import backgroundImg from "../assets/images/web-bg2.png";
+import webDesign1 from "../assets/images/web-design-img4.png";
+import seo1 from "../assets/images/seo1.png";
+import cta from  "../assets/images/cta-bg.jpg";
+import copy from  "../assets/images/copy1.jpg";
+import growth from  "../assets/images/growth1.jpg";
+import placeholder from "../assets/images/600x600.png";
+
+---
+
+<Layout title="Web Content Services | Content Marketing, Copywriting, and SEO | Easynet Solutions" description="Web content services at Easynet Solutions. From compelling website copywriting to seamless web design integration and content marketing, our tailored solutions empower your online success.">
+  
+  <Hero
+  title="Website Content Writing"
+  sub="Expert Website Content Services"
+  
+  image={backgroundImg.src}
+  >
+  <div slot="heroContent"> 
+    <p class="mt-6 lg:text-lg leading-8">
+        At Easynet Solutions, we excel in providing a range of website content services tailored to your unique needs. 
+    </p>
+    <p class="lg:text-lg leading-8 mb-4">
+      
+        Whether you require standalone website content, content written as part of a comprehensive web design package, or content marketing solutions that encompass regular SEO-optimized articles and blog posts, we've got you covered.
+      
+    </p>  
+    <p class="lg:text-lg leading-8">
+     
+       If you need captivating product descriptions, informative blog posts, persuasive landing page content, or if you are simply struggling to find the right words to convey your message on your website, Easynet Solutions is your trusted partner in creating content that not only speaks to your audience but also drives results.
+    </p>   
+    
+ 
+  </div>  
+  
+</Hero>
+
+<TwoColumnContentBlock
+  leadText="Website Content Writing"
+  title="Elevate Your Online Presence" 
+  image={seo1}
+  imageAlt="Web Design Prices"
+  href="/"
+  linkText="Get Started Today"
+>
+  <Fragment slot="content" >
+    <p class="my-4">
+      We understand that every business is unique. Our website content writing services are tailored to match your brand's identity, values, and goals. Whether you need compelling product descriptions, informative blog posts, or persuasive landing page content, we ensure that your website speaks directly to your target audience.
+    </p>
+    <p class="mb-4">
+      In the digital age, visibility is key. Our website content is not only engaging but also search engine optimized (SEO). This means your website will rank higher in search engine results, making it easier for potential customers to find you.
+    </p>
+    <p class="mb-4">
+      We not only inform your visitors but also inspire them to take action. With compelling and clear calls to action (CTAs), we guide your visitors through your website, turning them into customers.
+    </p>
+    
+  </Fragment>
+</TwoColumnContentBlock>
+
+  <div class="bg-gray-900 py-24">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:text-center">
+        <h2 class="text-base lg:text-xl font-semibold leading-7 text-easynet-orange">Website Features
+        </h2>
+        <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-6xl">We write website content that works </p>
+        <p class="mt-6 text-lg leading-8 text-gray-300">
+           
+            
+            Unlock the potential of your online presence with our web content writing services. We specialize in crafting content that attracts, engages, and converts your audience.
+        </p>
+      </div>
+      <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+        <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+          
+            <div class="flex flex-col">
+            <dt class="flex items-center gap-x-3 text-2xl leading-7 text-white">
+              
+              
+              <svg class="h-16 w-16 text-white"  viewBox="0 0 24 24"  fill="#ff9a02"  >  <circle cx="12" cy="8" r="7" />  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" /></svg>
+                  
+                  
+                  
+             <span class="font-bold">Tailored to Your Brand</span>
+            </dt>
+            <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
+              <p class="flex-auto">
+                We don't believe in one-size-fits-all content. We create content that reflects your unique brand identity, voice, and goals, ensuring a personalized and authentic online presence.
+              </p>
+              
+            </dd>
+          </div>
+          
+
+          <div class="flex flex-col">
+            <dt class="flex items-center gap-x-3 text-2xl leading-7 text-white">
+             
+
+              <svg class="h-16 w-16 text-easynet-orange"  width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M17.788 5.108A9 9 0 1021 12h-8" /></svg>
+              
+             <span class="font-bold">SEO Focused
+            <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
+              <p class="flex-auto"> 
+                We don't just write; we optimize. Our content is strategically crafted to improve your website's visibility in search engine results, helping you attract more organic traffic.
+             </p>
+             
+            </dd>
+          </div>
+          
+
+          <div class="flex flex-col">
+            <dt class="flex items-center gap-x-3 text-2xl leading-7 text-white">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ff9a02" class="w-16 h-16">
+                <path fill-rule="evenodd" d="M8.603 3.799A4.49 4.49 0 0112 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 013.498 1.307 4.491 4.491 0 011.307 3.497A4.49 4.49 0 0121.75 12a4.49 4.49 0 01-1.549 3.397 4.491 4.491 0 01-1.307 3.497 4.491 4.491 0 01-3.497 1.307A4.49 4.49 0 0112 21.75a4.49 4.49 0 01-3.397-1.549 4.49 4.49 0 01-3.498-1.306 4.491 4.491 0 01-1.307-3.498A4.49 4.49 0 012.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 011.307-3.497 4.49 4.49 0 013.497-1.307zm7.007 6.387a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd" />
+              </svg>
+              
+              
+             <span class="font-bold">Exceptional Quality</span>
+            </dt>
+            <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
+              <p class="flex-auto">Our commitment to excellence ensures that the content we provide is of the highest quality, designed to impress your audience and elevate your online presence.</p>
+             
+            </dd>
+          </div>
+          
+
+          <div class="flex flex-col">
+            <dt class="flex items-center gap-x-3 text-2xl leading-7 text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ff9a02" class="w-16 h-16">
+                <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" />
+                <path fill-rule="evenodd" d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z" clip-rule="evenodd" />
+              </svg>
+              
+                  
+             <span class="font-bold">Customer Focused</span>
+            </dt>
+            <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
+              <p class="flex-auto">
+                Our content is designed to captivate and engage your audience. We use persuasive language and compelling calls to action (CTAs) that drive conversions and keep visitors coming back.
+            </p>
+              
+            </dd>
+          </div>
+          
+
+          <div class="flex flex-col">
+            <dt class="flex items-center gap-x-3 text-2xl leading-7 text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ff9a02" class="w-16 h-16">
+                    <path d="M21.721 12.752a9.711 9.711 0 00-.945-5.003 12.754 12.754 0 01-4.339 2.708 18.991 18.991 0 01-.214 4.772 17.165 17.165 0 005.498-2.477zM14.634 15.55a17.324 17.324 0 00.332-4.647c-.952.227-1.945.347-2.966.347-1.021 0-2.014-.12-2.966-.347a17.515 17.515 0 00.332 4.647 17.385 17.385 0 005.268 0zM9.772 17.119a18.963 18.963 0 004.456 0A17.182 17.182 0 0112 21.724a17.18 17.18 0 01-2.228-4.605zM7.777 15.23a18.87 18.87 0 01-.214-4.774 12.753 12.753 0 01-4.34-2.708 9.711 9.711 0 00-.944 5.004 17.165 17.165 0 005.498 2.477zM21.356 14.752a9.765 9.765 0 01-7.478 6.817 18.64 18.64 0 001.988-4.718 18.627 18.627 0 005.49-2.098zM2.644 14.752c1.682.971 3.53 1.688 5.49 2.099a18.64 18.64 0 001.988 4.718 9.765 9.765 0 01-7.478-6.816zM13.878 2.43a9.755 9.755 0 016.116 3.986 11.267 11.267 0 01-3.746 2.504 18.63 18.63 0 00-2.37-6.49zM12 2.276a17.152 17.152 0 012.805 7.121c-.897.23-1.837.353-2.805.353-.968 0-1.908-.122-2.805-.353A17.151 17.151 0 0112 2.276zM10.122 2.43a18.629 18.629 0 00-2.37 6.49 11.266 11.266 0 01-3.746-2.504 9.754 9.754 0 016.116-3.985z" />
+                  </svg>
+             <span class="font-bold">Integrated Services
+            </span>
+            </dt>
+            <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
+              <p class="flex-auto">We offer a seamless blend of content creation, web design, and SEO efforts, providing you with a complete solution for online success.</p>
+             
+            </dd>
+          </div>
+          
+
+          <div class="flex flex-col">
+            <dt class="flex items-center gap-x-3 text-2xl leading-7 text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ff9a02" class="w-16 h-16">
+                    <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z" />
+                  </svg>
+                  
+              
+             <span class="font-bold">Proven Results</span>
+            </dt>
+            <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
+              <p class="flex-auto">Our track record of successfully enhancing online presences speaks for itself. With our website content writing services, you can expect concrete improvements in your website's performance and audience engagement.</p>
+              
+            </dd>
+          </div>
+          
+        </dl>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <ReversedTwoColumnContentBlock
+  leadText="Content Marketing"
+  title="Drive Traffic and Engagement"
+  image={webDesign1}
+  imageAlt="Web Design"
+  titleColor="black"
+  href="/"
+  linkText="Find Out More"
+>
+  <Fragment slot="content" >
+    <p class="my-4">
+      We are experts in creating SEO-optimized articles and blog posts that drive organic traffic and engage your audience, fostering brand loyalty and authority, whatever field you're in.
+    </p>
+    <p class="mb-4">
+      Content marketing is a powerful strategy for expanding your online reach and establishing your brand as an authority in your industry. Our content marketing solutions include a regular stream of SEO-optimized articles and blog posts, each designed to captivate your audience, answer their questions, and position your business as a trusted source of information.    </p>
+    <p>
+      The biggest advantage of using content marketing is that these highly optimised articles and posts will increase your chances of being found on Google. 
+    </p>
+  </Fragment>
+</ReversedTwoColumnContentBlock>
+
+ 
+
+<CallToAction
+  background={growth}  
+
+  spanTitle="Grow your business the "
+  titleSpan="Easy " spanTitleNext="Way"
+  description="We understand that having a website built or beginning an online marketing campaign can be both exciting and daunting for you or your business. We take the time to understand your business and what you want from your website or campaign. We will work with you to create a unique solution that perfectly matches your needs and goals. We will do the heavy lifting for you, and will be with you every step of the way."
+  linkText="Get Started Today"
+/>
+
+
+  
+
+</Layout>
+

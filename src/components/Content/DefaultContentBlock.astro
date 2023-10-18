@@ -1,6 +1,7 @@
 ---
 import SubTitle from "../Headings/SubTitle.astro";
 import Container from "../Layout/Container.astro";
+import PrimaryButton from "../Buttons/PrimaryButton.astro";
 
 interface Props {
   background?: "white" | "black" | "gray-500";
@@ -9,6 +10,8 @@ interface Props {
   smallSub?: string;
   classes?: string;
   textAlign?: "center" | "left" | "right";
+  href?: string;
+  linkText?: string;
 }
 const {
   background = "white",
@@ -17,6 +20,8 @@ const {
   title,
   smallSub,
   textAlign,
+  href,
+  linkText,
 } = Astro.props;
 ---
 
@@ -50,6 +55,13 @@ const {
     </div>
     <div class="text-lg text-gray-700 mx-auto mt-6">
       <slot name="content" />
+      {
+        href && (
+         <PrimaryButton newTab href={href}>
+             {linkText}
+          </PrimaryButton>  
+        )
+       }
     </div>
     
     <slot name="body" />
