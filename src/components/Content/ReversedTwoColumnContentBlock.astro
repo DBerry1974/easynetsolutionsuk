@@ -17,6 +17,7 @@ interface Props {
   linkText?: string;
   width: string;
   height: string;
+  newTab?: boolean;
 }
 const {
   image,
@@ -31,6 +32,7 @@ const {
   titleColor = "black",
   width,
   height,
+  newTab = false,
 } = Astro.props;
 ---
 
@@ -91,9 +93,13 @@ const {
           <slot name="content" />
           {
            href && (
-            <PrimaryButton newTab href={href}>
-                {linkText}
-             </PrimaryButton>
+           <a
+             href={href}
+             target={newTab}
+             class="mt-6 block sm:inline-flex items-center text-center uppercase no-underline bg-easynet-orange px-5 py-3 text-sm sm:text-lg tracking-wider font-bold hover:bg-gray-300 shadow-md text-white rounded-lg"
+             >
+             {linkText}
+             </a>
            )
           }
         </div>

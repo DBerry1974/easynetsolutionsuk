@@ -28,7 +28,7 @@ const {
 
 <section
   id="get-started-today"
-  class="relative overflow-hidden bg-brand-dark-orange py-32"
+  class="relative overflow-hidden bg-brand-dark-orange py-10 lg:py-32"
 >
   <Image
     class="absolute lg:w-screen top-1/2 left-1/2 max-w-none -translate-x-1/2 -translate-y-1/2"
@@ -57,12 +57,14 @@ const {
     >
     {spanTitleNext}</h2>
 
-      <p class="mt-4 text-xl tracking-tight text-white">
+      <p class="mt-4 px-2 text-md lg:text-xl tracking-tight text-white">
         {description}
       </p>
-      <Button href={href} rel className="mt-10">
+      
+      <a href={href} class="w-1/2 lg:w-1/4 mx-auto text-center mt-10 block uppercase no-underline bg-easynet-orange px-5 py-3 text-sm sm:text-lg  font-bold hover:bg-gray-300 text-white rounded-lg">
         {linkText}
-      </Button>
+      </a>
+   
     </div>
   </div>
 </section>
