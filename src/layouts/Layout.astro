@@ -22,11 +22,20 @@ const {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />  
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
-    <meta property="og:type" content="EasyNet Solutions - Web Design, SEO and Digital Marketing Services" />
-    <meta property="og:url" content="https://www.easynetsolutions.uk" />
-    <meta property="og:description" content="EasyNet Solutions - Web Design, SEO and Digital Marketing Services.">
+    <meta property="og:type" content="EasyNet Solutions" />
+    <meta property="og:description" content="EasyNet Solutions. Affordable, professional web design, SEO and digital marketing services.">
+    <meta property="og:description" content={description} />
+    <meta property="twitter:title" content="EasyNet Solutions">
+    <meta property="twitter:description" content="EasyNet Solutions. Affordable, professional web design, SEO and digital marketing services.">
     <meta name="description" content={description} />
+
     <title>{title}</title>
   </head>
   <body   class="text-gray-800">
