@@ -7,7 +7,7 @@ import PrimaryButton from "../Buttons/PrimaryButton.astro";
 interface Props {
   image: string;
   imageAlt: string;
-  title: string;
+  title?: string;
   titleColor?: "black" | "white" | "easynet-orange";
   smallSub?: string;
   leadText?: string;
@@ -90,7 +90,7 @@ const {
           </div>
         </div>
         <div
-        class="leading-8 lg:text-lg mx-auto mt-5 text-gray-700 lg:col-start-1 lg:row-start-1 lg:max-w-none"
+        class="lg:text-lg mx-auto mt-5 text-gray-700 lg:col-start-1 lg:row-start-1 lg:max-w-none"
         >
           <slot name="content" />
           {
